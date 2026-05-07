@@ -97,31 +97,31 @@ export default function Dashboard({ total, pillarScores, roadmap, onRestart, onO
 
     const phases = [
       {
-        name: "Tracking, Attribution & Pixel Architecture",
+        name: "Global Listening Architecture & Data Acquisition",
         icon: Map,
-        pct: 0.2,
-        description: `Stabilize the ${lowestPillar.name.toLowerCase()} layer — your lowest-scoring pillar — and lay the tracking, identity, and attribution primitives every later initiative compounds on.`,
+        pct: 0.25,
+        description: `Stabilize the ${lowestPillar.name.toLowerCase()} layer — your lowest-scoring pillar — and lay the multi-channel ingest, keyword matrices, and source licensing primitives every later initiative compounds on.`,
       },
       {
-        name: "Account Restructuring & Consolidation",
+        name: "Conversational Analytics & Sentiment Scoring",
         icon: Layers,
-        pct: 0.4,
-        description: `Deployment and integration of ${deploymentAssets} into live accounts, wired through the media operations that move pipeline and revenue.`,
+        pct: 0.3,
+        description: `Deployment and integration of ${deploymentAssets} into the intelligence stack, wired through the NLP pipelines that turn raw conversation into decision-grade signal.`,
       },
       {
-        name: "Creative Testing Ecosystem",
+        name: "Competitor Intelligence & Market Mapping",
         icon: Cpu,
         pct: 0.25,
         description: orchestrationAsset
-          ? `Stand up the creative engine around ${orchestrationAsset}, with structured testing protocols and hook libraries feeding every active campaign.`
-          : "Stand up the creative engine with structured testing protocols, hook libraries, and production workflows feeding every active campaign.",
+          ? `Stand up the competitive intelligence engine around ${orchestrationAsset}, with Share of Voice, perception mapping, and whitespace analysis feeding every strategy review.`
+          : "Stand up the competitive intelligence engine with Share of Voice measurement, perception mapping, and whitespace analysis feeding every strategy review.",
       },
       {
-        name: "Scaling Operations & ROAS Optimization",
+        name: "Predictive Trend Forecasting & Signal Detection",
         icon: ShieldCheck,
-        pct: 0.15,
+        pct: 0.2,
         description:
-          "Lock in pacing guardrails, margin-aware bidding, and portfolio scaling rules; transfer ownership to your operating team with a final audit.",
+          "Lock in real-time alerting, anomaly detection, and automated executive briefings; transfer ownership to your intelligence team with a final governance audit.",
       },
     ];
     let cursor = new Date(kickoff);
@@ -155,7 +155,7 @@ export default function Dashboard({ total, pillarScores, roadmap, onRestart, onO
             <img src="/NEW_horizontal.png" alt="Keenfunnel" className="h-7 w-auto" />
             <span className="hidden h-4 w-px bg-slate-800 sm:block" />
             <span className="hidden text-[11px] font-semibold tracking-[0.22em] text-slate-300 sm:inline">
-              PERFORMANCE BLUEPRINT
+              INTELLIGENCE BLUEPRINT
             </span>
           </div>
           <div className="flex items-center gap-3">
@@ -175,7 +175,7 @@ export default function Dashboard({ total, pillarScores, roadmap, onRestart, onO
               onClick={onRestart}
               className="inline-flex items-center gap-2 rounded border border-slate-800 bg-slate-950/70 px-3 py-1.5 text-[11px] tracking-widest text-slate-300 transition hover:border-slate-700 hover:text-white"
             >
-              <RotateCcw className="h-3.5 w-3.5" /> NEW AUDIT
+              <RotateCcw className="h-3.5 w-3.5" /> NEW DIAGNOSTIC
             </button>
           </div>
         </div>
@@ -221,12 +221,12 @@ export default function Dashboard({ total, pillarScores, roadmap, onRestart, onO
               />
               <Stat
                 icon={Gauge}
-                label="Media Efficiency"
+                label="Intelligence Coverage"
                 value={`${efficiencyPct}%`}
                 sub={
                   efficiencyPct < 60
-                    ? "High performance debt detected"
-                    : "Paid media operating above parity"
+                    ? "High intelligence debt detected"
+                    : "Listening stack operating above parity"
                 }
                 emphasis={efficiencyPct < 60 ? "warn" : "ok"}
               />
@@ -234,7 +234,7 @@ export default function Dashboard({ total, pillarScores, roadmap, onRestart, onO
                 icon={Video}
                 label="Projected Roadmap"
                 value={timelineLabel}
-                sub="Dedicated growth pod · 300h / month"
+                sub="Dedicated intelligence pod · 300h / month"
               />
             </div>
           </div>
@@ -283,8 +283,8 @@ export default function Dashboard({ total, pillarScores, roadmap, onRestart, onO
                 Parity reached across all five pillars.
               </div>
               <p className="mt-2 text-sm text-slate-400">
-                Your paid media operation is positioned in the elite tier. We recommend a bespoke growth
-                engagement focused on compounding incrementality and LTV expansion.
+                Your market intelligence operation is positioned in the elite tier. We recommend a bespoke
+                engagement focused on causal inference, executive automation, and adjacent-category expansion.
               </p>
             </div>
           ) : (
@@ -427,11 +427,11 @@ export default function Dashboard({ total, pillarScores, roadmap, onRestart, onO
             <div className="max-w-xl">
               <div className="text-[11px] tracking-[0.22em] text-[#49D27C]">NEXT STEP</div>
               <h3 className="mt-3 text-2xl font-semibold tracking-tight text-gold-gradient md:text-3xl">
-                Convert this audit into a deployed growth system.
+                Convert this diagnostic into a deployed intelligence system.
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-slate-400">
-                Our senior media strategists will walk you through a confidential implementation
-                sequence, platform-agnostic stack recommendations, and a phased scaling plan.
+                Our senior intelligence strategists will walk you through a confidential implementation
+                sequence, vendor-agnostic stack recommendations, and a phased deployment plan.
               </p>
             </div>
             <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">

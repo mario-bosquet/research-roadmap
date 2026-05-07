@@ -60,12 +60,12 @@ export default function Glossary({ initialSlug, onBack }: Props) {
         <div className="border-b border-slate-900 pb-10">
           <div className="text-[11px] tracking-[0.3em] text-slate-500">REFERENCE INDEX</div>
           <h1 className="mt-3 font-display text-3xl font-normal leading-tight tracking-[0.06em] text-clip md:text-4xl">
-            The Paid Media Performance Lexicon
+            The Market Intelligence Lexicon
           </h1>
           <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-slate-400">
             A definitive reference for every component referenced in your Implementation
             Blueprint. Each definition explains what the asset is and, more importantly, why
-            it matters to profitable scale.
+            it matters to decision-grade intelligence.
           </p>
         </div>
 

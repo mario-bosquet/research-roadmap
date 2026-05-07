@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import {
-  ArrowRight,
-  ShieldCheck,
   Sparkles,
   ClipboardList,
   LayoutDashboard,
@@ -26,9 +24,9 @@ export default function Landing({ onStart }: Props) {
           />
         </div>
         <div className="hidden items-center gap-6 text-xs tracking-widest text-slate-400 md:flex">
-          <span>AD AUDIT v4.2</span>
+          <span>INTELLIGENCE BLUEPRINT v4.2</span>
           <span className="h-1 w-1 rounded-full bg-[#49D27C]" />
-          <span>HIGH-TICKET B2B</span>
+          <span>ENTERPRISE B2B</span>
         </div>
       </header>
 
@@ -42,17 +40,17 @@ export default function Landing({ onStart }: Props) {
           <div className="w-full lg:w-2/3 text-left">
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/50 px-4 py-2 text-[14px] font-medium tracking-widest text-slate-300 backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-[#49D27C]" />
-              ADVERTISING AUDIT &amp; PERFORMANCE BLUEPRINT
+              MARKET INTELLIGENCE &amp; SOCIAL LISTENING BLUEPRINT
             </div>
 
             <h1 className="mt-8 font-display text-4xl font-normal leading-[1.1] tracking-tight text-clip md:text-6xl">
-              Stop Wasting Your Ad Budget
+              See the Market Before It Moves
             </h1>
 
             <p className="mt-7 max-w-2xl text-lg leading-[1.55] text-slate-300 md:text-xl">
-              A 30-point strategic audit spanning tracking architecture, account structure, creative velocity,
-              scaling operations, and growth intelligence. Engineered for high-ticket B2B operators scaling
-              paid media with discipline.
+              A 30-point strategic diagnostic spanning global listening architecture, conversational analytics,
+              competitor intelligence, predictive forecasting, and executive reporting. Engineered for CMOs and
+              strategy directors deploying enterprise-grade market intelligence.
             </p>
           </div>
 
@@ -85,7 +83,7 @@ export default function Landing({ onStart }: Props) {
                 ))}
               </div>
               <div className="ml-3 font-sans text-sm text-text-on-dark">
-                trusted by <span className="text-[#49D27C] font-medium">+600</span> B2B operators
+                trusted by <span className="text-[#49D27C] font-medium">+600</span> enterprise strategists
               </div>
             </div>
           </div>
@@ -101,7 +99,7 @@ export default function Landing({ onStart }: Props) {
             <div>
               <div className="text-[11px] tracking-[0.22em] text-[#49D27C]">HOW IT WORKS</div>
               <h2 className="mt-2 font-display text-xl font-normal tracking-[0.06em] text-text-ui md:text-2xl">
-                A four-step path from audit to profitable scale.
+                A four-step path from diagnostic to deployed intelligence.
               </h2>
             </div>
             <div className="hidden text-[11px] tracking-widest text-slate-500 md:block">
@@ -114,26 +112,26 @@ export default function Landing({ onStart }: Props) {
               {
                 step: "01",
                 icon: ClipboardList,
-                title: "The Audit",
-                body: "Complete a 30-question diagnostic across 5 core pillars of your paid media operation and growth infrastructure.",
+                title: "The Diagnostic",
+                body: "Complete a 30-question diagnostic across 5 core pillars of your market intelligence and social listening architecture.",
               },
               {
                 step: "02",
                 icon: LayoutDashboard,
                 title: "The Blueprint",
-                body: "Instantly unlock your maturity evaluation, precise engineering hour estimates, and a tailored execution timeline.",
+                body: "Instantly unlock your intelligence maturity evaluation, engineering hour estimates, and a tailored deployment timeline.",
               },
               {
                 step: "03",
                 icon: Download,
                 title: "Export & Share",
-                body: "Download your customized blueprint as a PDF or generate a shareable link for your internal stakeholders.",
+                body: "Download your customized blueprint as a PDF or generate a shareable link for internal CMO and strategy stakeholders.",
               },
               {
                 step: "04",
                 icon: CalendarCheck,
                 title: "Executive Briefing",
-                body: "Book a strategic meeting with our team. Share your PDF or link beforehand so our strategists can analyze your baseline prior to the call.",
+                body: "Book a strategic session with our team. Share your PDF or link beforehand so our intelligence strategists can analyze your baseline before the call.",
               },
             ].map(({ step, icon: Icon, title, body }, i) => (
               <motion.div

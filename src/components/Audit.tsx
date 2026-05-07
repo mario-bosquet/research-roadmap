@@ -34,11 +34,11 @@ export default function Audit({ onComplete }: Props) {
             <img src="/NEW_horizontal.png" alt="Keenfunnel" className="h-7 w-auto" />
             <span className="hidden h-4 w-px bg-slate-800 sm:block" />
             <span className="hidden text-[11px] font-semibold tracking-[0.22em] text-slate-300 sm:inline">
-              AD AUDIT
+              INTELLIGENCE DIAGNOSTIC
             </span>
           </div>
           <div className="text-[11px] tracking-widest text-slate-400">
-            AUDIT PROGRESS: {String(index + 1).padStart(2, "0")} / {QUESTIONS.length}
+            DIAGNOSTIC PROGRESS: {String(index + 1).padStart(2, "0")} / {QUESTIONS.length}
           </div>
         </div>
         <div className="h-[2px] w-full bg-slate-900">
