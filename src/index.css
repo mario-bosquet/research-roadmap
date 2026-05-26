@@ -32,25 +32,29 @@ body {
 }
 
 @layer utilities {
+  /* Primary gradient: 7-stop aurora sequence */
   .text-gold-gradient {
-    background-image: linear-gradient(to right, #FFEEB5, #FBE8AA, #FFE6BB, #D5C286, #C2B26D, #B59F45);
+    background-image: linear-gradient(to right, #DCC8F8, #FCFCBF, #FFD4F7, #C8DDFF, #B2E0FF, #9ABDFF, #93ADFF);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
+  /* Hero h1 gradient */
   .text-clip {
-    background-image: linear-gradient(
-      to right,
-      #069E43,
-      #20DD6B,
-      #6CEF8C,
-      #E0EBB0,
-      #FDEBB9,
-      #E9D79B,
-      #C7B565,
-      #B3A147
-    );
+    background-image: linear-gradient(to right, #DCC8F8, #FCFCBF, #FFD4F7, #C8DDFF, #B2E0FF, #9ABDFF, #93ADFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Accent gradient (replaces solid green / two-tone green gradient) */
+  .bg-accent-gradient {
+    background-image: linear-gradient(to right, #93ADFF, #778bca);
+  }
+
+  .text-accent-gradient {
+    background-image: linear-gradient(to right, #93ADFF, #778bca);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -63,7 +67,7 @@ body {
 }
 
 ::selection {
-  background: rgba(32, 221, 107, 0.35);
+  background: rgba(147, 173, 255, 0.35);
   color: #fff;
 }
 

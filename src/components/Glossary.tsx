@@ -44,12 +44,12 @@ export default function Glossary({ initialSlug, onBack }: Props) {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <button
             onClick={onBack}
-            className="group inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/60 px-4 py-2 text-[12px] font-medium tracking-wide text-slate-300 transition hover:border-[#49D27C]/40 hover:text-[#49D27C]"
+            className="group inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/60 px-4 py-2 text-[12px] font-medium tracking-wide text-slate-300 transition hover:border-[#93ADFF]/40 hover:text-[#93ADFF]"
           >
             <ArrowLeft className="h-4 w-4 transition group-hover:-translate-x-0.5" />
             Back to Dashboard
           </button>
-          <div className="flex items-center gap-2 text-[11px] tracking-[0.28em] text-[#49D27C]">
+          <div className="flex items-center gap-2 text-[11px] tracking-[0.28em] text-[#93ADFF]">
             <BookOpen className="h-4 w-4" />
             EXECUTIVE GLOSSARY
           </div>
@@ -74,7 +74,7 @@ export default function Glossary({ initialSlug, onBack }: Props) {
             <section key={pillar.id}>
               <div className="flex items-baseline justify-between border-b border-slate-900 pb-4">
                 <div>
-                  <div className="text-[11px] tracking-[0.28em] text-[#49D27C]">
+                  <div className="text-[11px] tracking-[0.28em] text-[#93ADFF]">
                     PILLAR · {pillar.short.toUpperCase()}
                   </div>
                   <h2 className="mt-2 font-display text-xl font-normal tracking-[0.06em] text-text-ui">{pillar.name}</h2>
@@ -109,7 +109,7 @@ export default function Glossary({ initialSlug, onBack }: Props) {
                               className={[
                                 "scroll-mt-28 rounded-2xl border p-6 transition-all duration-700",
                                 isActive
-                                  ? "border-[#49D27C]/60 bg-[#49D27C]/[0.08] shadow-[0_0_0_1px_rgba(73,210,124,0.35),0_20px_60px_-30px_rgba(73,210,124,0.6)]"
+                                  ? "border-[#93ADFF]/60 bg-[#93ADFF]/[0.08] shadow-[0_0_0_1px_rgba(147,173,255,0.35),0_20px_60px_-30px_rgba(147,173,255,0.6)]"
                                   : "border-slate-800/80 bg-slate-950/50 hover:border-slate-700",
                               ].join(" ")}
                             >
@@ -139,7 +139,7 @@ export default function Glossary({ initialSlug, onBack }: Props) {
         <div className="mt-24 flex justify-center">
           <button
             onClick={onBack}
-            className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/60 px-5 py-2.5 text-[12px] font-medium tracking-wide text-slate-300 transition hover:border-[#49D27C]/40 hover:text-[#49D27C]"
+            className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/60 px-5 py-2.5 text-[12px] font-medium tracking-wide text-slate-300 transition hover:border-[#93ADFF]/40 hover:text-[#93ADFF]"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to Dashboard

@@ -4,6 +4,9 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { PILLARS, QUESTIONS } from "../data/questions";
 import { BrandText } from "./BrandText";
 
+const ACCENT = "#93ADFF";
+const ACCENT_DARK = "#778bca";
+
 type Props = {
   onComplete: (answers: Record<number, number>) => void;
 };
@@ -31,7 +34,7 @@ export default function Audit({ onComplete }: Props) {
       <header className="relative z-10 border-b border-slate-900/80">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
           <div className="flex items-center gap-3">
-            <img src="/NEW_horizontal.png" alt="Keenfunnel" className="h-7 w-auto" />
+            <img src="/Original_3D_horizontal.png" alt="Keenfunnel" className="h-7 w-auto" />
             <span className="hidden h-4 w-px bg-slate-800 sm:block" />
             <span className="hidden text-[11px] font-semibold tracking-[0.22em] text-slate-300 sm:inline">
               INTELLIGENCE DIAGNOSTIC
@@ -43,7 +46,8 @@ export default function Audit({ onComplete }: Props) {
         </div>
         <div className="h-[2px] w-full bg-slate-900">
           <motion.div
-            className="h-full bg-gradient-to-r from-[#49D27C]/20 to-[#49D27C]"
+            className="h-full"
+            style={{ backgroundImage: `linear-gradient(to right, ${ACCENT}33, ${ACCENT})` }}
             initial={false}
             animate={{ width: `${progress}%` }}
             transition={{ type: "spring", stiffness: 140, damping: 22 }}
@@ -52,10 +56,16 @@ export default function Audit({ onComplete }: Props) {
       </header>
 
       <main className="relative z-10 mx-auto flex max-w-3xl flex-col px-6 py-14 md:py-20">
-        <div className="mb-6 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em]">
-          <span className="text-[#49D27C]">Pillar {PILLARS.findIndex((p) => p.id === pillar.id) + 1}</span>
-          <span className="h-px flex-1 bg-slate-800" />
-          <span className="text-slate-400">{pillar.short}</span>
+        {/* Question header: no separator line, topic text with new gradient */}
+        <div className="mb-6 flex items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.22em]">
+          <span style={{ backgroundImage: `linear-gradient(to right, ${ACCENT}, ${ACCENT_DARK})`, WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>
+            Pillar {PILLARS.findIndex((p) => p.id === pillar.id) + 1}
+          </span>
+          <span
+            style={{ backgroundImage: `linear-gradient(to right, #DCC8F8, #FCFCBF, #FFD4F7, #C8DDFF, #B2E0FF, #9ABDFF, #93ADFF)`, WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}
+          >
+            {pillar.short}
+          </span>
         </div>
 
         <AnimatePresence mode="wait">
@@ -82,16 +92,17 @@ export default function Audit({ onComplete }: Props) {
                     onClick={() => choose(opt.score)}
                     className={`group flex w-full items-start gap-4 rounded-lg border px-6 py-5 text-left transition-all duration-300 hover:scale-[1.02] ${
                       isSelected
-                        ? "border-[#49D27C]/60 bg-[#49D27C]/10 shadow-[0_0_0_1px_rgba(73,210,124,0.5)]"
-                        : "border-slate-800/90 bg-slate-950/60 hover:border-[#49D27C]/40 hover:bg-slate-900/80 hover:shadow-[0_0_0_1px_rgba(73,210,124,0.2)]"
+                        ? "border-[#93ADFF]/60 bg-[#93ADFF]/10 shadow-[0_0_0_1px_rgba(147,173,255,0.5)]"
+                        : "border-slate-800/90 bg-slate-950/60 hover:border-[#93ADFF]/40 hover:bg-slate-900/80 hover:shadow-[0_0_0_1px_rgba(147,173,255,0.2)]"
                     }`}
                   >
                     <div
                       className={`mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded border text-[11px] font-semibold tracking-wider transition ${
                         isSelected
-                          ? "border-[#49D27C] bg-[#49D27C] text-[#111426]"
+                          ? "border-[#93ADFF] text-[#0a0c18]"
                           : "border-slate-700 text-slate-400 group-hover:border-slate-500 group-hover:text-slate-200"
                       }`}
+                      style={isSelected ? { backgroundImage: `linear-gradient(to right, ${ACCENT}, ${ACCENT_DARK})` } : {}}
                     >
                       {opt.label}
                     </div>
@@ -120,9 +131,14 @@ export default function Audit({ onComplete }: Props) {
               return (
                 <span
                   key={p.id}
-                  className={`h-1.5 w-6 rounded-full transition ${
-                    active ? "bg-[#49D27C]" : done ? "bg-[#49D27C]/40" : "bg-slate-800"
-                  }`}
+                  className="h-1.5 w-6 rounded-full transition"
+                  style={
+                    active
+                      ? { backgroundImage: `linear-gradient(to right, ${ACCENT}, ${ACCENT_DARK})` }
+                      : done
+                      ? { backgroundColor: `${ACCENT}66` }
+                      : { backgroundColor: "#1e293b" }
+                  }
                 />
               );
             })}

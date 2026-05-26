@@ -44,7 +44,7 @@ export default function Footer() {
               href="https://legal-center.keenfunnel.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-medium tracking-wide text-slate-400 transition-colors duration-300 hover:text-[#07A245]"
+              className="flex items-center gap-2 text-sm font-medium tracking-wide text-slate-400 transition-colors duration-300 hover:text-[#93ADFF]"
             >
               <Scale className="h-4 w-4" />
               <span>Legal Center</span>

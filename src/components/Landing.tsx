@@ -18,14 +18,14 @@ export default function Landing({ onStart }: Props) {
       <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
         <div className="flex items-center gap-2.5">
           <img
-            src="/NEW_horizontal.png"
+            src="/Original_3D_horizontal.png"
             alt="Keenfunnel"
             className="h-8 w-auto"
           />
         </div>
         <div className="hidden items-center gap-6 text-xs tracking-widest text-slate-400 md:flex">
           <span>INTELLIGENCE BLUEPRINT v4.2</span>
-          <span className="h-1 w-1 rounded-full bg-[#49D27C]" />
+          <span className="h-1 w-1 rounded-full" style={{ background: "linear-gradient(to right, #93ADFF, #778bca)" }} />
           <span>ENTERPRISE B2B</span>
         </div>
       </header>
@@ -39,7 +39,7 @@ export default function Landing({ onStart }: Props) {
         >
           <div className="w-full lg:w-2/3 text-left">
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/50 px-4 py-2 text-[14px] font-medium tracking-widest text-slate-300 backdrop-blur">
-              <Sparkles className="h-3.5 w-3.5 text-[#49D27C]" />
+              <Sparkles className="h-3.5 w-3.5 text-[#93ADFF]" />
               MARKET INTELLIGENCE &amp; SOCIAL LISTENING BLUEPRINT
             </div>
 
@@ -60,7 +60,7 @@ export default function Landing({ onStart }: Props) {
               className="animate-idle-halo"
               innerClassName="px-7 py-6 flex items-center justify-center"
             >
-              <Power className="h-8 w-8 text-black group-hover:text-[#5BEB84] transition-colors duration-300" strokeWidth={2.5} />
+              <Power className="h-8 w-8 text-[#0a0c18] group-hover:text-[#93ADFF] transition-colors duration-300" strokeWidth={2.5} />
             </SpotlightButton>
             <div className="text-xs tracking-widest text-slate-500">
               ~8 MINUTES · 30 QUESTIONS · CONFIDENTIAL
@@ -83,7 +83,7 @@ export default function Landing({ onStart }: Props) {
                 ))}
               </div>
               <div className="ml-3 font-sans text-sm text-text-on-dark">
-                trusted by <span className="text-[#49D27C] font-medium">+600</span> enterprise strategists
+                trusted by <span className="font-medium text-accent-gradient" style={{ backgroundImage: "linear-gradient(to right, #93ADFF, #778bca)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>+600</span> enterprise strategists
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function Landing({ onStart }: Props) {
         >
           <div className="flex items-end justify-between">
             <div>
-              <div className="text-[11px] tracking-[0.22em] text-[#49D27C]">HOW IT WORKS</div>
+              <div className="text-[11px] tracking-[0.22em]" style={{ backgroundImage: "linear-gradient(to right, #93ADFF, #778bca)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>HOW IT WORKS</div>
               <h2 className="mt-2 font-display text-xl font-normal tracking-[0.06em] text-text-ui md:text-2xl">
                 A four-step path from diagnostic to deployed intelligence.
               </h2>
@@ -143,8 +143,8 @@ export default function Landing({ onStart }: Props) {
                 <SpotlightCard>
                   <div className="flex h-full flex-col p-6">
                     <div className="flex items-center justify-between">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#49D27C]/30 bg-[#49D27C]/10">
-                        <Icon className="h-5 w-5 text-[#49D27C]" />
+                      <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#93ADFF]/30 bg-[#93ADFF]/10">
+                        <Icon className="h-5 w-5 text-[#93ADFF]" />
                       </div>
                       <span className="text-[10px] font-semibold tracking-[0.22em] text-slate-500">
                         STEP {step}
@@ -169,4 +169,3 @@ export default function Landing({ onStart }: Props) {
     </div>
   );
 }
-

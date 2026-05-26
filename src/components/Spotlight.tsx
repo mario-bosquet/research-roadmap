@@ -12,8 +12,8 @@ import {
 type SpotlightTone = "sky" | "gold";
 
 const TONE_RGB: Record<SpotlightTone, string> = {
-  sky: "73, 210, 124",
-  gold: "224, 235, 176",
+  sky: "147, 173, 255",
+  gold: "220, 200, 248",
 };
 
 function useSpotlight() {
@@ -117,13 +117,12 @@ export const SpotlightButton = forwardRef<HTMLElement, SpotlightButtonProps>(
     const rgb = TONE_RGB[tone];
 
     const baseInner =
-      "relative flex w-full items-center justify-center gap-2 rounded-[50px] px-6 py-3.5 text-sm font-bold uppercase tracking-wider tracking-[0.04em] transition-all duration-300 bg-gradient-to-b from-[#5BEB84] to-[#07A245] group-hover:from-[#0d2340] group-hover:via-[#071628] group-hover:to-[#040e1c] text-[#111426] group-hover:text-[#47CB79]";
+      "relative flex w-full items-center justify-center gap-2 rounded-[50px] px-6 py-3.5 text-sm font-bold uppercase tracking-wider tracking-[0.04em] transition-all duration-300 bg-gradient-to-r from-[#93ADFF] to-[#778bca] group-hover:from-[#0d1a40] group-hover:via-[#07102a] group-hover:to-[#04091c] text-[#0a0c18] group-hover:text-[#93ADFF]";
 
-    /* Hover: massive, wide, soft neon-green halo — vastly larger spread than idle */
     const wrapperStyle: CSSProperties = active
       ? {
           boxShadow:
-            "0 0 55px 22px rgba(73,210,124,0.45), 0 0 110px 50px rgba(73,210,124,0.2), 0 0 180px 90px rgba(73,210,124,0.08)",
+            "0 0 55px 22px rgba(147,173,255,0.45), 0 0 110px 50px rgba(147,173,255,0.2), 0 0 180px 90px rgba(147,173,255,0.08)",
         }
       : {};
 
